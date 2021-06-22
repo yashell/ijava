@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="53287ecc-c2f8-43eb-a170-604aa7ba5500" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\myfile\Java\maven" />
+        <option name="userSettingsFile" value="D:\myfile\Java\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1uFEjaYciUpiW4ydTQZ902Hgxzl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="14" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/site/src/main/java/com/sunfish/site" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15527344" />
+    <property name="project.structure.side.proportion" value="0.5356322" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sunfish.site.config" />
+      <recent name="com.sunfish.file.controller" />
+      <recent name="com.sunfish.site.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myapp\workspace\ijava\site\src\main\java\com\sunfish\site" />
+      <recent name="D:\myapp\workspace\ijava\site\src\main\resources" />
+      <recent name="D:\myapp\workspace\ijava\site" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SiteApplication">
+    <configuration name="MyBatisPlusGenerater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sunfish.site.utils.MyBatisPlusGenerater" />
+      <module name="site" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sunfish.site.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="file" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sunfish.file.FileApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SiteApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="site" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sunfish.site.SiteApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyBatisPlusGenerater" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53287ecc-c2f8-43eb-a170-604aa7ba5500" name="Default Changelist" comment="" />
+      <created>1624253072208</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624253072208</updated>
+      <workItem from="1624253077336" duration="7237000" />
+      <workItem from="1624263728584" duration="31404000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="198" key="#Inspections" timestamp="1624333261546">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1624333261546" />
+    <state x="440" y="94" key="#Project_Structure" timestamp="1624253261208">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1624253261208" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1624347911503">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1624347911503" />
+    <state width="419" height="466" key="DebuggerActiveHint" timestamp="1624353805958">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="419" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1624353805958" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1624323646367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1624323646367" />
+    <state width="1877" height="421" key="GridCell.Tab.0.bottom" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.0.center" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.0.left" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.0.right" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.1.bottom" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.1.center" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.1.left" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.1.right" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.2.bottom" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.2.center" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.2.left" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state width="1877" height="421" key="GridCell.Tab.2.right" timestamp="1624372695088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="421" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1624372695088" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1624322354731">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1624322354731" />
+    <state x="662" y="254" width="596" height="532" key="find.popup" timestamp="1624331148759">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="254" width="596" height="532" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1624331148759" />
+    <state x="335" y="129" key="new project wizard" timestamp="1624325725448">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="335" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1624325725448" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/site/src/main/java/com/sunfish/site/utils/MyBatisPlusGenerater.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/site/src/main/java/com/sunfish/site/controller/CategoryController.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
