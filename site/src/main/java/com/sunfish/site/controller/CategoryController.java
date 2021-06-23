@@ -1,12 +1,9 @@
 package com.sunfish.site.controller;
 
 
-import com.sunfish.site.common.PageResult;
-import com.sunfish.site.common.ServerResult;
 
-import com.sunfish.site.model.Article;
+import com.sunfish.site.common.ServerResult;
 import com.sunfish.site.model.Category;
-import com.sunfish.site.service.impl.ArticleServiceImpl;
 import com.sunfish.site.service.impl.CategoryServiceImpl;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,14 +86,14 @@ public class CategoryController {
     }
 
     /***
-     * 分页查列表
+     * 获取树
      * @param parnetId
      * @return
      */
-    @GetMapping("/list")
+    @GetMapping("/tree")
     @ApiOperation(value="获取列表", notes="仔细阅读参数，可以传一个或多个")
     @ApiImplicitParams({
-            @ApiImplicitParam(name="parnetId",defaultValue="0",value="栏目ID，传则查该栏目下文章",required=false,paramType="path",dataType="int"),
+            @ApiImplicitParam(name="parnetId",defaultValue="0",value="栏目ID，传则查该栏目下文章",required=false,paramType="query",dataType="int"),
     })
 
     @ApiResponses({
@@ -107,8 +104,8 @@ public class CategoryController {
             @ApiResponse(code=500,message="传参有问题或后台出错"),
             @ApiResponse(code=900,message="token出错")
     })
-    public ServerResult<List<Article>> queryList(  @RequestParam(value="parnetId",defaultValue="0") Integer parnetId) {
-        ServerResult serverResult = ServerResult.defaultSuccess(categoryServiceImpl.List(parnetId));
+    public ServerResult<Category> tree(@RequestParam(value = "parnetId",defaultValue="0") Integer parnetId) {
+        ServerResult serverResult = ServerResult.defaultSuccess(categoryServiceImpl.tree(parnetId,0));
         return serverResult;
     }
 

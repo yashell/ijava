@@ -15,10 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author yangshi
@@ -29,6 +30,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
 
     @Autowired
     private CategoryMapper categoryMapper;
+
     /***
      * 新增
      * @param category
@@ -46,6 +48,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
     public int updata(Category category) {
         return categoryMapper.updateById(category);
     }
+
     /***
      * 物理删除
      * @param id
@@ -58,11 +61,22 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
 
     /**
      * 查列表
+     *
      * @return
      */
-    public List<Category> List (int parnetId) {
-        QueryWrapper<Category> sql =  new QueryWrapper<Category>().eq("parnet_id",parnetId).orderByDesc("weight");
-        List<Category> list = categoryMapper.selectList(sql);
-        return list;
+    public Category tree(int parnetId, int deep) {
+
+        Category category;
+        if (parnetId == 0) {
+            category = new Category();
+        } else {
+            category = categoryMapper.selectById(parnetId);
+        }
+
+        QueryWrapper<Category> sql = new QueryWrapper<Category>().eq("parnet_id", parnetId).orderByDesc("weight");
+
+        category.setChildren(categoryMapper.selectList(sql));
+
+        return category;
     }
 }

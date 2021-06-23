@@ -20,7 +20,7 @@ import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author yangshi
@@ -33,6 +33,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
     /**
      * 查单条
+     *
      * @param id
      * @return
      */
@@ -72,28 +73,45 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     }
 
 
-
     /**
      * 查列表
+     *
      * @param current
      * @param size
      * @param title
      * @return
      */
-    public PageResult ArticleList (int current , int size , String title) {
+    public PageResult list(int current, int size, String title, Integer categoryId, boolean isbanner) {
 
-        System.out.println(title.isEmpty());
+
         IPage<Article> articlePage = new Page<>(current, size);
 
-        QueryWrapper<Article> sql =  new QueryWrapper<Article>()
-                .eq("is_del",0).orderByDesc("update_at");
-               if(StringUtils.isNotBlank(title) && !"null".equals(title)) {
-                   sql = new QueryWrapper<Article>()
-                           .like("title", title).eq("is_del",0).orderByDesc("id");
-               }
+        QueryWrapper<Article> sql = new QueryWrapper<Article>();
+        sql.eq("is_del", 0);
+        sql.orderByDesc("update_at");
+        if (StringUtils.isNotBlank(title) && !"null".equals(title)) {
+            sql.like("title", title);
+        }
+        if (categoryId != null) {
+            sql.eq("category_id", categoryId);
+        }
+
+//        System.out.println(parnetCategoryId);
+//        if(categoryId != null) {
+//            sql.eq("parnet_category_id", parnetCategoryId);
+//        }
+//        if(StringUtils.isNotBlank(categoryId) && !"null".equals(title)) {
+//           sql.like("title", title);
+//        }
+
+        if (isbanner) {
+            sql.ne("banner", "");
+        }
+
+        System.out.println(isbanner);
 
 
-        articlePage = articleMapper.selectPage(articlePage,sql);
+        articlePage = articleMapper.selectPage(articlePage, sql);
         List<Article> list = articlePage.getRecords();
         PageResult pageResult = new PageResult();
         pageResult.setCurrent(current);

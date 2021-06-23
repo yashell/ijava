@@ -1,13 +1,16 @@
 package com.sunfish.site.model;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author yangshi
@@ -20,87 +23,120 @@ public class Article implements Serializable {
     /**
      * 文章ID
      */
+    @ApiModelProperty(value = "用户ID(新增填null,编辑填写id)", required = false, name = "id", example = "0")
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
      * 类别ID
      */
+    @ApiModelProperty(value = "类别ID", required = false, name = "categoryId", example = "0")
+    @TableField("category_id")
     private Integer categoryId;
 
     /**
      * 父级类别ID
      */
+    @ApiModelProperty(value = "父级类别ID", required = false, name = "parnetCategoryId", example = "0")
+    @TableField("parnet_category_id")
     private Integer parnetCategoryId;
 
     /**
      * 关键字
      */
+    @ApiModelProperty(value = "关键字", required = false, name = "keywords", example = "")
+    @TableField("keywords")
     private String keywords;
 
     /**
      * 链接地址
      */
+    @ApiModelProperty(value = "链接地址", required = false, name = "link", example = "")
+    @TableField("link")
     private String link;
 
     /**
      * 文章标题
      */
+    @ApiModelProperty(value = "文章标题", required = false, name = "title", example = "")
+    @TableField("title")
     private String title;
 
     /**
      * 作者
      */
+    @ApiModelProperty(value = "作者", required = false, name = "author", example = "")
+    @TableField("author")
     private String author;
 
     /**
      * 简介
      */
+    @ApiModelProperty(value = "简介", required = false, name = "introduction", example = "")
+    @TableField("introduction")
     private String introduction;
 
     /**
      * 文章内容
      */
+    @ApiModelProperty(value = "文章内容,为富文本", required = false, name = "content", example = "")
+    @TableField("content")
     private String content;
 
     /**
      * 备注
      */
+    @ApiModelProperty(value = "备注", required = false, name = "remark", example = "")
+    @TableField("remark")
     private String remark;
 
     /**
      * 创建时间
      */
+    @ApiModelProperty(value = "创建时间", required = false, name = "createAt", example = "")
+    @TableField("create_at")
     private LocalDateTime createAt;
 
     /**
      * 更新时间
      */
+    @ApiModelProperty(value = "更新时间", required = false, name = "updateAt", example = "")
+    @TableField("update_at")
     private LocalDateTime updateAt;
 
     /**
      * 删除标识
      */
+    @ApiModelProperty(value = "删除标识,默认false", required = false, name = "isDel", example = "false")
+    @TableField("is_del")
     private Boolean isDel;
 
     /**
      * 点击次数
      */
+    @ApiModelProperty(value = "点击次数", required = false, name = "click", example = "0")
+    @TableField("click")
     private Integer click;
 
     /**
      * 权重
      */
+    @ApiModelProperty(value = "权重", required = false, name = "weight", example = "")
+    @TableField("weight")
     private Integer weight;
 
     /**
      * 缩略图
      */
+    @ApiModelProperty(value = "缩略图", required = false, name = "thumbnail", example = "")
+    @TableField("thumbnail")
     private String thumbnail;
 
     /**
      * 轮播图
      */
+    @ApiModelProperty(value = "轮播图", required = false, name = "banner", example = "")
+    @TableField("banner")
     private String banner;
 
     public Integer getId() {

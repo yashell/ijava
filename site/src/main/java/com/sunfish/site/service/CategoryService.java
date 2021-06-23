@@ -5,11 +5,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author yangshi
- * @since 2021-06-22
+ * @since 2021-06-23
  */
 public interface CategoryService extends IService<Category> {
 

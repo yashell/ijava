@@ -1,24 +1,23 @@
-package com.sunfish.site;
+package com.sunfish.site.utils;
 
-import com.sunfish.site.utils.Mytest;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import org.apache.commons.lang3.StringUtils;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@SpringBootTest
-class SiteApplicationTests {
+public class Mytest {
 
     @Getter
     @Setter
     @ToString
+    public static
     class DemoObj {
         private String id;
         private String pid;
@@ -57,8 +56,7 @@ class SiteApplicationTests {
         return root;
     }
 
-    @Test
-    void contextLoads() {
+    public void test() {
         List demolist = new ArrayList();
         demolist.add(new DemoObj("1", "", "顶级"));
         demolist.add(new DemoObj("122", "12", "第三层22"));
@@ -75,5 +73,4 @@ class SiteApplicationTests {
         DemoObj demoObj = combineTree(demolist);
         System.out.println(demoObj);
     }
-
 }

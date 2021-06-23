@@ -38,29 +38,35 @@ public class ArticleController {
      * @param categoryId
      * @return
      */
-    @GetMapping("/list")
+    @PostMapping("/list")
     @ApiOperation(value="获取列表", notes="仔细阅读参数，可以传一个或多个")
     @ApiImplicitParams({
-            @ApiImplicitParam(name="current",defaultValue="1",value="当前第几页，默认值为：1",required=false,paramType="path",dataType="int"),
-            @ApiImplicitParam(name="size",defaultValue="10",value="每页多少条数据，默认值为10",required=false,paramType="path",dataType="int"),
-            @ApiImplicitParam(name="title",defaultValue="",value="查询的文章名称，默认值为空",required=false,paramType="path",dataType="String",example="文章标题"),
-//            @ApiImplicitParam(name="categoryId",defaultValue="0",value="栏目ID，传则查该栏目下文章",required=false,paramType="path",dataType="int"),
-            @ApiImplicitParam(name="isbanner",value="是否是banner图，传则1则表示只查有banner图的文章，默认为0",required=false,paramType="path",dataType="int"),
-            @ApiImplicitParam(name="parnetCategoryId",value="父栏目ID",required=false,paramType="path",dataType="int"),
+            @ApiImplicitParam(name="current",defaultValue="1",value="当前第几页，默认值为：1",required=false,paramType="query",dataType="int"),
+            @ApiImplicitParam(name="size",defaultValue="10",value="每页多少条数据，默认值为10",required=false,paramType="query",dataType="int"),
+            @ApiImplicitParam(name="title",value="查询的文章名称，默认值为空",required=false,paramType="query",dataType="String"),
+            @ApiImplicitParam(name="categoryId",value="栏目ID，传则查该栏目下文章",required=false,paramType="query",dataType = "VARCHAR"),
+            @ApiImplicitParam(name="isbanner",value="是否是banner图，传则1则表示只查有banner图的文章，默认为0",required=false,paramType="query",dataType="int"),
+            @ApiImplicitParam(name="parnetCategoryId",value="父栏目ID",required=false,paramType="path",dataType="Integer")
     })
 
     @ApiResponses({
             @ApiResponse(code=200,message="查询成功"),
+            @ApiResponse(code=400,message="请求参数类型不对或者超长，不进后台"),
             @ApiResponse(code=401,message="请求路径没有或页面跳转路径不对"),
             @ApiResponse(code=403,message="禁止访问"),
             @ApiResponse(code=404,message="请求路径没有或页面跳转路径不对"),
             @ApiResponse(code=500,message="传参有问题或后台出错"),
             @ApiResponse(code=900,message="token出错")
     })
-    public PageResult<List<Article>> queryList(@RequestParam(value="current",defaultValue="1") Integer current, @RequestParam(value="size",defaultValue="10") Integer size  , @RequestParam(value="title",defaultValue="") String title,  @RequestParam(value="categoryId",defaultValue="1") Integer categoryId) {
-//        ,@RequestParam(value="isbanner",defaultValue="0") int isbanner, @RequestParam(value="parnetCategoryId",defaultValue="0") int parnetCategoryId
-        System.out.println(categoryId);
-        PageResult pageResult = ArticleServiceImpl.ArticleList(current,size, title);
+    public PageResult<List<Article>> queryList(
+            @RequestParam(value="current",defaultValue="1") Integer current,
+            @RequestParam(value="size",defaultValue="10") Integer size  ,
+            @RequestParam(value="title", required=false) String title,
+            @ApiParam(value="categoryId", required=false) Integer categoryId,
+            @RequestParam(value="isbanner",defaultValue = "0") boolean isbanner,
+            @RequestParam(value="parnetCategoryId", required=false) Integer parnetCategoryId
+    ) {
+        PageResult pageResult = ArticleServiceImpl.list(current,size, title, categoryId, isbanner);
         return pageResult;
     }
 
@@ -68,7 +74,6 @@ public class ArticleController {
      * 查单条
      * @param id
      * @return
-     * http://localhost:1111/plus/user/selectbyid?id=27
      */
     @GetMapping("/byid")
     @ApiOperation(value="获取单条", notes="这里边填写备注，用户可仔细阅读")
@@ -81,18 +86,20 @@ public class ArticleController {
             @ApiResponse(code=900,message="token出错")
     })
     @ApiImplicitParams({
-            @ApiImplicitParam(name="id",defaultValue="1",value="文章ID",required=true,paramType="path",dataType="int"),
+            @ApiImplicitParam(name="id",defaultValue="1",value="文章ID",required=true,paramType="query",dataType="int"),
     })
-    public Object selectById(@RequestParam int id) {
+    public ServerResult<Article> selectById(@RequestParam int id) {
         Article article = ArticleServiceImpl.selectById(id);
-        ServerResult<Object> serverResult = ServerResult.defaultSuccess(article);
+        ServerResult<Article> serverResult = ServerResult.defaultSuccess(article);
         return serverResult;
     }
+
+
+
 
     /***
      * 保存方法 有id为编辑，没id为新增
      * @param article
-     * 请求示例 http://localhost:1111/userinfo/add?name=测试&sex=0&score=295.5
      * id 自增 ，时间后台自动添加
      * @return
      */

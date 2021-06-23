@@ -6,7 +6,7 @@ import com.sunfish.site.model.Article;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author yangshi
